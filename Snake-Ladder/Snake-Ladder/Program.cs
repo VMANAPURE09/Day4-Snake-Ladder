@@ -10,8 +10,11 @@ namespace Snake_Ladder
             int position = 0;
             Console.WriteLine("Position is " + position);
 
+            int NoOfDieroll = 0;
             Random random = new Random();
             int number = random.Next(1, 7);
+            NoOfDieroll++;
+            Console.WriteLine("Number of die rolls " + NoOfDieroll);
             Console.WriteLine(number);
 
             int option = random.Next(0, 3);
@@ -22,18 +25,23 @@ namespace Snake_Ladder
                 {
                     case 0:
                         Console.WriteLine("No play");
+                        Console.WriteLine("the position is" + position);
                         break;
                     case 1:
                         Console.WriteLine("Ladder");
                         position = position + number;
+
+
                         if (position > 100)
                         {
                             position = position - number;
                         }
+                        Console.WriteLine("the position is" + position);
                         break;
                     case 2:
                         Console.WriteLine("Snake");
                         position = position - number;
+                        Console.WriteLine("the position is" + position);
                         break;
 
 
